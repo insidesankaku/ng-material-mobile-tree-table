@@ -1,0 +1,16 @@
+<mobile-tree-table 
+[dataSource]="dataSource" 
+[rowHeaders]="['name', 'totalAmount']"
+[columnHeaders]="['description', 'iban']"
+[rowHeaderFormatters]="rowHeaderFormatters">
+  <column-item name="description">
+    <div *columnLabel>Description</div>
+    <div *columnValue="let column">{{column.description}}</div>
+  </column-item>
+
+  <column-item name="iban">
+    <div *columnLabel>iban</div>
+    <div *columnValue="let column">{{column.iban}}</div>
+  </column-item>
+</mobile-tree-table>
+
