@@ -21,20 +21,20 @@ export class AppComponent {
                   rowHeader: { name: 'foo1 foo2 foo3 foo4', totalAmount: 111111 },
                   children: [
                     {
-                      description: '1',
-                      iban: '2'
+                      bar: '1',
+                      foobar: '2'
                     },
                     {
-                      description: '3',
-                      iban: '4'
+                      bar: '3',
+                      foobar: '4'
                     },
                     {
-                      description: '5',
-                      iban: '6'
+                      bar: '5',
+                      foobar: '6'
                     },
                     {
-                      description: '7',
-                      iban: '8'
+                      bar: '7',
+                      foobar: '8'
                     },
                   ]
                 }
@@ -46,20 +46,20 @@ export class AppComponent {
           rowHeader: { name: 'foo1 foo3', totalAmount: 123 },
           children: [
             {
-              description: '01',
-              iban: '02'
+              bar: '01',
+              foobar: '02'
             },
             {
-              description: '03',
-              iban: '04'
+              bar: '03',
+              foobar: '04'
             },
             {
-              description: '05',
-              iban: '06'
+              bar: '05',
+              foobar: '06'
             },
             {
-              description: '07',
-              iban: '08'
+              bar: '07',
+              foobar: '08'
             },
           ],
         },
@@ -69,8 +69,6 @@ export class AppComponent {
 
   rowHeaderFormatters = {
     name: (name) => name.toUpperCase(),
-    totalAmount: (value) => {
-      return new CurrencyPipe('en').transform(value, 'USD');
-    }
+    totalAmount: (value) =>  new CurrencyPipe('en').transform(value, 'USD')
   };
 }
