@@ -124,7 +124,7 @@ dataSource = [
   ];
 
    rowHeaders = ['title', 'income'];
-   columnHeaders = ['title', 'type', 'amount', 'price']";
+   columnHeaders = ['title', 'type', 'amount', 'price'];
 ```
  
  User can customize column content using template-based approach
@@ -177,7 +177,7 @@ dataSource = [
  staticRowHeader = {title: 'static header title', value: 'static header value'}
  ```
 
- in case of flat table dataSource
+ In case of flat table `dataSource`
 
 ```typescript
 dataSource = [
@@ -288,6 +288,6 @@ dataSource = [
   staticRowHeader = {title: 'static header title', value: 'static header value'};
   rowHeaderFormatters = {
     title: (name) => name.toUpperCase(),
-    income: (value) =>  new CurrencyPipe('en').transform(value, 'USD')
+    income: (value) => new CurrencyPipe('en').transform(value, 'USD')
   };
  ```
