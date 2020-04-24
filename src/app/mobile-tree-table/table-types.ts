@@ -10,7 +10,7 @@ export interface TableElement {
     [property: string]: any;
 }
 
-export interface DefaultRowHeader {
+export interface StaticRowHeader {
     title: string;
     value: number | string;
 }

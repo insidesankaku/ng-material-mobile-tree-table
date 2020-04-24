@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation, ChangeDetectionStrategy, ContentChildren, QueryList } from '@angular/core';
-import { TreeTable, TableElement, DefaultRowHeader } from './table-types';
+import { TreeTable, TableElement, StaticRowHeader } from './table-types';
 import { ColumnItem } from './table-column-item';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { takeUntil, skip } from 'rxjs/operators';
@@ -23,7 +23,7 @@ import { TreeTableDataSource } from './tree-table-data-source';
      [rowGroup]="selectedElement"
      [rowHeaders]="rowHeaders" 
      [rowHeaderFormatters]="rowHeaderFormatters" 
-     [defaultRowHeader]="defaultRowHeader"
+     [staticRowHeader]="staticRowHeader"
      (elementSelection)="forth($event)">
     </table-headers>
   
@@ -33,7 +33,7 @@ import { TreeTableDataSource } from './tree-table-data-source';
      [data]="selectedElement" 
      [rowHeaders]="rowHeaders" 
      [rowHeaderFormatters]="rowHeaderFormatters"
-     [defaultRowHeader]="defaultRowHeader" 
+     [staticRowHeader]="staticRowHeader" 
      [rowTemplate]="rowTemplate">
    </flat-table>
   </mat-card>
@@ -60,7 +60,7 @@ export class MobileTreeTable<R, H> implements OnInit {
   @Input() rowHeaders: string[];
   @Input() rowHeaderFormatters: object = {};
   @Input() columnHeaders: string[];
-  @Input() defaultRowHeader: DefaultRowHeader;
+  @Input() staticRowHeader: StaticRowHeader;
 
   @ContentChildren(ColumnItem) rowTemplate: QueryList<ColumnItem<R>>;
 
