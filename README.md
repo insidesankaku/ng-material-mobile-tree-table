@@ -2,18 +2,53 @@
 
 [![Licence](https://img.shields.io/npm/l/ng-dynamic-component.svg?maxAge=2592000)](https://github.com/mlrv/ng-material-treetable/LICENSE)
 
-what is this?
-it is a representation of a tree table for mobile devices. 
+> What is this?
+This is a representation of a tree table for mobile devices. 
 
-why is this needed?
-because it is hard to represent a table, especially a tree table on small screens.
+> Why is this needed?
+Because it is hard to represent a table, especially a tree table on small screens.
+
+> What data source should I use?
+ [
+     {
+         foo: 'bar',
+         ...
+     },
+     ...
+ ]
+
+ or
+
+[
+    {
+        rowHeader: {},
+        children: [
+             rowHeader: {},
+             children: [
+               {
+                foo: 'bar',
+                  ...
+                },
+              ...
+             ]
+        ]
+    },
+    ...
+]
+
+ > How many nesting levels could I use?
+ A LOT
+
+ > Can I customize it somehow?
+ You can use templates to customize columns, and formatter functions to customize rows
+
+ ...
 
 ## Table of Contents
 
 1. [Installation](#installation)
-1. [Data Format](#data-format)
-1. [Options](#options)
-1. [Events](#events)
+2. [How to use](#how-to-use)
+3. [Complete example](#complete-example)
 
 ## Installation
 
@@ -165,7 +200,6 @@ dataSource = [
 ```html 
 <mobile-tree-table [dataSource]="dataSource" [columnHeaders]="columnHeaders"
 ```
-
 
  ### Complete example
 
