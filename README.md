@@ -2,13 +2,14 @@
 
 [![Licence](https://img.shields.io/npm/l/ng-dynamic-component.svg?maxAge=2592000)](https://github.com/mlrv/ng-material-treetable/LICENSE)
 
-> What is this?
-This is a representation of a tree table for mobile devices. 
+What is this?
+>This is a representation of a tree table for mobile devices. 
 
-> Why is this needed?
-Because it is hard to represent a table, especially a tree table on small screens.
+Why is this needed?
+>Because it is hard to represent a table, especially a tree table on small screens.
 
-> What data source should I use?
+What data source should I use?
+```typescript
  [
      {
          foo: 'bar',
@@ -35,12 +36,12 @@ Because it is hard to represent a table, especially a tree table on small screen
     },
     ...
 ]
+```
+ How many nesting levels could I use?
+ > A LOT
 
- > How many nesting levels could I use?
- A LOT
-
- > Can I customize it somehow?
- You can use templates to customize columns, and formatter functions to customize rows
+ Can I customize it somehow?
+ > You can use templates to customize columns, and formatter functions to customize rows
 
  ...
 
@@ -203,6 +204,7 @@ dataSource = [
 
  ### Complete example
 
+```html
 <mobile-tree-table 
     [dataSource]="dataSource" 
     [columnHeaders]="columnHeaders" 
@@ -230,7 +232,7 @@ dataSource = [
     <div *columnValue="let column">{{column.price | currency}}</div>
   </column-item>
 </mobile-tree-table>
-
+```
 
 ```typescript
 dataSource = [
