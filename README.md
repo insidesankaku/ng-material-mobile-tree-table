@@ -43,6 +43,7 @@ What data source should I use?
 ```
  How many nesting levels could I use?
  > A LOT
+ 
  ![Gif Demo](src/assets/demo2.gif)
 
  Can I customize it somehow?
