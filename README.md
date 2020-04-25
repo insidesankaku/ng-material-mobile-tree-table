@@ -2,8 +2,6 @@
 
 [![Licence](https://img.shields.io/npm/l/ng-dynamic-component.svg?maxAge=2592000)](https://github.com/mlrv/ng-material-treetable/LICENSE)
 
-![Gif Demo](src/assets/demo.gif)
-
 What is this?
 >This is a representation of a tree table for mobile devices. 
 
@@ -210,6 +208,8 @@ dataSource = [
 ```
 
  ### Complete example
+
+ ![Gif Demo](src/assets/demo.gif)
 
 ```html
 <mobile-tree-table 
