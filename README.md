@@ -2,7 +2,7 @@
 
 [![Licence](https://img.shields.io/npm/l/ng-dynamic-component.svg?maxAge=2592000)](https://github.com/mlrv/ng-material-treetable/LICENSE)
 
-![Gif Demo](assets/demo.gif)
+![Gif Demo](src/assets/demo.gif)
 
 What is this?
 >This is a representation of a tree table for mobile devices. 
