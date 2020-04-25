@@ -41,7 +41,7 @@ What data source should I use?
  > A LOT
 
  Can I customize it somehow?
- > You can use templates to customize columns, and formatter functions to customize rows
+ > You can use templates to customize columns, and formatting functions to customize rows
 
  ...
 
@@ -53,7 +53,7 @@ What data source should I use?
 
 ## Installation
 
-> comming soon...
+> coming soon...
 
 ```typescript
 import { MobileTreeTableModule } from 'mobile-tree-table';
@@ -126,8 +126,9 @@ dataSource = [
    rowHeaders = ['title', 'income'];
    columnHeaders = ['title', 'type', 'amount', 'price'];
 ```
- 
- User can customize column content using template-based approach
+
+ User can customize column content using a template-based approach
+
 
 ```html
 <mobile-tree-table [dataSource]="dataSource" [columnHeaders]="columnHeaders" [rowHeaders]="rowHeaders">
@@ -153,7 +154,7 @@ dataSource = [
 </mobile-tree-table>
 ```
 
- Notice, that in this case user will see only columns that have templates. In case of no templates user will see all columns that were specified in `columnHeaders` property with default template
+ Notice, that in this case user will see only columns that have templates. In case of no templates, the user will see all columns that were specified in `columnHeaders` property with the default template
 
  ```html
   <div class="column-item">
@@ -162,7 +163,7 @@ dataSource = [
   </div>
  ```
 
- To format rowHeaders user can use `rowHeaderFormatters` property
+ To format rowHeaders, user can use `rowHeaderFormatters` property
 
  ```typescript
   rowHeaderFormatters = {
