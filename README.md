@@ -22,9 +22,13 @@ What data source should I use?
 
 [
     {
-        rowHeader: {},
+        rowHeader: { 
+                    foo: 'foo', 
+                    bar: 'bar', 
+                    ...
+                    },
         children: [
-             rowHeader: {},
+             rowHeader: { ... },
              children: [
                {
                 foo: 'bar',
@@ -53,7 +57,7 @@ What data source should I use?
 
 ## Installation
 
-> coming soon...
+> npm coming soon...
 
 ```typescript
 import { MobileTreeTableModule } from 'mobile-tree-table';
