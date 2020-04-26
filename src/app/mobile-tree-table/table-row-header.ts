@@ -1,15 +1,15 @@
 import { Component, ChangeDetectionStrategy, Input } from "@angular/core";
-import { DefaultRowHeader } from './table-types';
+import { StaticRowHeader } from './table-types';
 
 @Component({
   selector: 'row-header',
   template: `
-    <header class="row-header-main" *ngIf="defaultRowHeader">
-      <span>{{defaultRowHeader.title}}</span>
-      <span>{{defaultRowHeader.value}}</span>
+    <header class="row-header-main" *ngIf="staticRowHeader">
+      <span>{{staticRowHeader.title}}</span>
+      <span>{{staticRowHeader.value}}</span>
     </header>
     
-    <header class="row-header-main" *ngIf="parent && !defaultRowHeader">
+    <header class="row-header-main" *ngIf="parent && !staticRowHeader">
       <ng-container *ngFor="let key of rowHeaders">
         <span *ngIf="parent[key]">
          {{ rowHeaderFormatters[key] ? rowHeaderFormatters[key](parent[key]) : parent[key] }}
@@ -23,5 +23,5 @@ export class RowHeader {
   @Input() rowHeaders: Array<String>;
   @Input() rowHeaderFormatters: object;
   @Input() parent: any;
-  @Input() defaultRowHeader: DefaultRowHeader;
+  @Input() staticRowHeader: StaticRowHeader;
 }

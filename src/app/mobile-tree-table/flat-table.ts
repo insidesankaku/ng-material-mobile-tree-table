@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, QueryList, OnInit } from "@angular/core";
 import { ColumnItem } from './table-column-item';
 import { TableElements } from './table-elements';
-import { DefaultRowHeader } from './table-types';
+import { StaticRowHeader } from './table-types';
 
 @Component({
     selector: 'flat-table',
@@ -11,7 +11,7 @@ import { DefaultRowHeader } from './table-types';
     template: `
      <row-header 
       [parent]="data.parent"
-      [defaultRowHeader]="defaultRowHeader"
+      [staticRowHeader]="staticRowHeader"
       [rowHeaders]="rowHeaders"
       [rowHeaderFormatters]="rowHeaderFormatters">
      </row-header>
@@ -48,7 +48,7 @@ export class FlatTable<R> implements OnInit {
     @Input() data: TableElements;
     @Input() rowHeaders: Array<String>;
     @Input() rowHeaderFormatters: object;
-    @Input() defaultRowHeader: DefaultRowHeader;
+    @Input() staticRowHeader: StaticRowHeader;
     @Input() columnHeaders: string[];
     @Input() rowTemplate: QueryList<ColumnItem<R>>;
 

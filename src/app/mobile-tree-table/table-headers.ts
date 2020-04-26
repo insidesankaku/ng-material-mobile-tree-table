@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from "@angular/core";
-import { TableElement, DefaultRowHeader } from './table-types';
+import { TableElement, StaticRowHeader } from './table-types';
 import { TableElements } from './table-elements';
 
 @Component({
@@ -8,7 +8,7 @@ import { TableElements } from './table-elements';
      <div class="table-headers">
       <row-header 
        [parent]="rowGroup.parent"
-       [defaultRowHeader]="defaultRowHeader"
+       [staticRowHeader]="staticRowHeader"
        [rowHeaders]="rowHeaders"
        [rowHeaderFormatters]="rowHeaderFormatters"></row-header>
      
@@ -31,7 +31,7 @@ export class TableHeaders<R, H> {
     @Input() rowGroup: TableElements;
     @Input() rowHeaders: Array<String>;
     @Input() rowHeaderFormatters: object;
-    @Input() defaultRowHeader: DefaultRowHeader;
+    @Input() staticRowHeader: StaticRowHeader;
     @Output() elementSelection = new EventEmitter<TableElement>();
 
     public selectElement(item: TableElement): void {

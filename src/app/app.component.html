@@ -1,16 +1,16 @@
 <mobile-tree-table 
 [dataSource]="dataSource" 
 [rowHeaders]="['name', 'totalAmount']"
-[columnHeaders]="['description', 'iban']"
+[columnHeaders]="['bar', 'foobar']"
 [rowHeaderFormatters]="rowHeaderFormatters">
-  <column-item name="description">
-    <div *columnLabel>Description</div>
-    <div *columnValue="let column">{{column.description}}</div>
+  <column-item name="bar">
+    <div *columnLabel>bar</div>
+    <div *columnValue="let column">{{column.bar}}</div>
   </column-item>
 
-  <column-item name="iban">
-    <div *columnLabel>iban</div>
-    <div *columnValue="let column">{{column.iban}}</div>
+  <column-item name="foobar">
+    <div *columnLabel>foobar</div>
+    <div *columnValue="let column">{{column.foobar}}</div>
   </column-item>
 </mobile-tree-table>
 
