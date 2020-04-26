@@ -2,8 +2,6 @@
 
 [![Licence](https://img.shields.io/npm/l/ng-dynamic-component.svg?maxAge=2592000)](https://github.com/mlrv/ng-material-treetable/LICENSE)
 
-![Gif Demo](assets/demo.gif)
-
 What is this?
 >This is a representation of a tree table for mobile devices. 
 
@@ -45,6 +43,8 @@ What data source should I use?
 ```
  How many nesting levels could I use?
  > A LOT
+
+ ![Gif Demo](src/assets/demo2.gif)
 
  Can I customize it somehow?
  > You can use templates to customize columns, and formatting functions to customize rows
@@ -210,6 +210,8 @@ dataSource = [
 ```
 
  ### Complete example
+
+ ![Gif Demo](src/assets/demo1.gif)
 
 ```html
 <mobile-tree-table 
